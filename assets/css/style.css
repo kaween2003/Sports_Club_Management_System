@@ -1,0 +1,334 @@
+/* Sports Club Management System (SCMS) - Version 1.0
+   Main styles - Designed for N.G.Kaween Newmal */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background: radial-gradient(circle at top, #1e293b, #020617);
+    color: #e5e7eb;
+}
+
+.page-wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-footer {
+    margin-top: auto;
+    padding: 12px 20px;
+    text-align: center;
+    font-size: 0.85rem;
+    background: rgba(15,23,42,0.95);
+    border-top: 1px solid rgba(148,163,184,0.3);
+    color: #cbd5f5;
+}
+
+/* Centered card for auth pages */
+
+.center-screen {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 15px;
+}
+
+.auth-card {
+    width: 100%;
+    max-width: 420px;
+    background: rgba(15,23,42,0.95);
+    border-radius: 16px;
+    padding: 28px 26px 26px;
+    box-shadow: 0 18px 40px rgba(0,0,0,0.5);
+    border: 1px solid rgba(148,163,184,0.4);
+}
+
+.auth-card h1 {
+    font-size: 1.2rem;
+    text-align: center;
+    letter-spacing: 1px;
+    color: #a5b4fc;
+    margin-bottom: 8px;
+}
+
+.auth-card h2 {
+    font-size: 1.6rem;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.auth-card label {
+    display: block;
+    margin-top: 12px;
+    margin-bottom: 4px;
+    font-size: 0.9rem;
+    color: #cbd5f5;
+}
+
+.auth-card input {
+    width: 100%;
+    padding: 9px 10px;
+    border-radius: 8px;
+    border: 1px solid #4b5563;
+    background: rgba(15,23,42,0.9);
+    color: #e5e7eb;
+}
+
+.auth-card input:focus {
+    outline: none;
+    border-color: #6366f1;
+    box-shadow: 0 0 0 1px #6366f1;
+}
+
+.btn-primary {
+    margin-top: 18px;
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 999px;
+    border: none;
+    background: linear-gradient(135deg, #4f46e5, #06b6d4);
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.1s ease, box-shadow 0.1s ease, opacity 0.15s;
+}
+
+.btn-primary:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 12px 30px rgba(37,99,235,0.4);
+    opacity: 0.95;
+}
+
+.small-links {
+    margin-top: 14px;
+    text-align: center;
+    font-size: 0.85rem;
+}
+
+.small-links a {
+    color: #a5b4fc;
+    text-decoration: none;
+}
+
+.small-links a:hover {
+    text-decoration: underline;
+}
+
+/* Alerts */
+
+.alert {
+    margin-bottom: 10px;
+    padding: 8px 10px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    background: rgba(15,118,110,0.15);
+    border: 1px solid rgba(45,212,191,0.5);
+}
+
+.alert-error {
+    background: rgba(185,28,28,0.18);
+    border-color: rgba(248,113,113,0.7);
+}
+
+.alert-success {
+    background: rgba(22,163,74,0.18);
+    border-color: rgba(74,222,128,0.7);
+}
+
+/* Topbar */
+
+.topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 22px;
+    background: rgba(15,23,42,0.98);
+    border-bottom: 1px solid rgba(148,163,184,0.35);
+    position: sticky;
+    top: 0;
+    z-index: 20;
+}
+
+.logo {
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #a5b4fc;
+}
+
+.topnav a {
+    margin-left: 18px;
+    color: #e5e7eb;
+    text-decoration: none;
+    font-size: 0.92rem;
+    position: relative;
+}
+
+.topnav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    height: 2px;
+    width: 0;
+    background: linear-gradient(90deg,#6366f1,#22d3ee);
+    transition: width 0.2s;
+}
+
+.topnav a:hover::after {
+    width: 100%;
+}
+
+/* Dashboard */
+
+.dashboard {
+    padding: 24px 22px 30px;
+    flex: 1;
+}
+
+.dashboard-header h1 {
+    font-size: 1.7rem;
+    margin-bottom: 4px;
+}
+
+.dashboard-header p {
+    font-size: 0.95rem;
+    color: #9ca3af;
+}
+
+.card-grid {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+}
+
+.dash-card {
+    display: block;
+    padding: 18px 16px;
+    background: radial-gradient(circle at top left, rgba(79,70,229,0.45), rgba(15,23,42,0.95));
+    border-radius: 14px;
+    border: 1px solid rgba(99,102,241,0.45);
+    text-decoration: none;
+    color: #e5e7eb;
+    box-shadow: 0 12px 30px rgba(15,23,42,0.7);
+    transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+
+.dash-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 18px 40px rgba(15,23,42,0.9);
+}
+
+.dash-card h3 {
+    font-size: 1.05rem;
+    margin-bottom: 6px;
+}
+
+.dash-card .number {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin: 6px 0 4px;
+}
+
+.dash-card span {
+    font-size: 0.85rem;
+    color: #cbd5f5;
+}
+
+.dashboard-footer-note {
+    margin-top: 26px;
+    font-size: 0.85rem;
+    color: #9ca3af;
+}
+
+/* Content pages */
+
+.content {
+    padding: 24px 22px 30px;
+    flex: 1;
+}
+
+.content h1 {
+    font-size: 1.6rem;
+    margin-bottom: 18px;
+}
+
+.two-columns {
+    display: grid;
+    gap: 18px;
+}
+
+@media (min-width: 900px) {
+    .two-columns {
+        grid-template-columns: 1.1fr 1.3fr;
+    }
+}
+
+.simple-form label {
+    display: block;
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #cbd5f5;
+}
+
+.simple-form input,
+.simple-form select,
+.simple-form textarea {
+    width: 100%;
+    margin-top: 4px;
+    padding: 8px 9px;
+    border-radius: 8px;
+    border: 1px solid #4b5563;
+    background: rgba(15,23,42,0.9);
+    color: #e5e7eb;
+    font-size: 0.92rem;
+}
+
+.simple-form textarea {
+    resize: vertical;
+}
+
+/* Tables */
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+    margin-top: 8px;
+}
+
+.data-table th,
+.data-table td {
+    padding: 8px 10px;
+    border-bottom: 1px solid rgba(55,65,81,0.9);
+}
+
+.data-table th {
+    text-align: left;
+    background: rgba(15,23,42,0.9);
+}
+
+.data-table tr:nth-child(even) {
+    background: rgba(15,23,42,0.55);
+}
+
+.btn-small {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 999px;
+    background: rgba(59,130,246,0.2);
+    border: 1px solid rgba(59,130,246,0.6);
+    color: #bfdbfe;
+    text-decoration: none;
+    font-size: 0.8rem;
+}
+
+.btn-small:hover {
+    background: rgba(59,130,246,0.4);
+}
